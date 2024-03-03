@@ -1,5 +1,9 @@
 body {
-  background: #c8fad7;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 107, 141) 0%,
+    rgb(0, 69, 91) 90%
+  );
   font-family: "roboto", sans-serif;
 }
 .weather-app-container {
