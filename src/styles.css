@@ -47,3 +47,16 @@ a {
   border-radius: 8px;
   font-size: 16px;
 }
+.app-data {
+  display: flex;
+  justify-content: space-between;
+}
+.current-city {
+  margin: 0;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: bold;
+}
+.app-details strong {
+  color: #ea4676;
+}
