@@ -1,9 +1,5 @@
 body {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(0, 107, 141) 0%,
-    rgb(0, 69, 91) 90%
-  );
+  background: #e3e3e3;
   font-family: "roboto", sans-serif;
 }
 .weather-app-container {
@@ -13,4 +9,26 @@ body {
   padding: 20px;
   box-shadow: 0 20px 25px rgba(65, 50, 100, 0.08);
   border-radius: 12px;
+}
+.search-form {
+  display: block;
+  margin-top: 0cm;
+  border: none;
+}
+.search-form-button {
+  background-color: #51b4c1;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+.search-form-input {
+  background-color: #f6f5f5;
+  padding: 15px 20px;
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
 }
