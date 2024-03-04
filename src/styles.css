@@ -72,9 +72,9 @@ a {
   line-height: 80px;
 }
 .weather-app-icon {
-  font-size: 60px;
-  font-weight: bold;
-  margin-right: 3px;
+  weight: 80px;
+  height: 80px;
+  line-height: 80px;
 }
 .weather-app-unit {
   margin-top: 5px;
