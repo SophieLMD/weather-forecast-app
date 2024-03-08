@@ -72,7 +72,7 @@ a {
   line-height: 80px;
 }
 .weather-app-icon {
-  weight: 80px;
+  font-weight: 80px;
   height: 80px;
   line-height: 80px;
 }
@@ -83,6 +83,8 @@ a {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 .weather-forecast-day {
   font-size: 16px;
