@@ -54,19 +54,23 @@ function getForecast(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 function displayForecast(response) {
   console.log(response);
   let forecastHTML = "";
-  response.data.daily.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="row">
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="row">
             <div class="col-2">
-              <div class="weather-forecast-day">${day}</div>
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png"
-                alt=""
-                width="40"
+              <div class="weather-forecast-day">${formatDay(day.time)}</div>
+              <img 
+                src="${day.condition.icon_url}" class = "weather-forecast-icon"
               />
               <div class="weather-forecast-temperature">
                 <span class="forecast-temperature-max">${Math.round(
@@ -78,6 +82,7 @@ function displayForecast(response) {
               </div>
             </div>
           </div>`;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
